@@ -1,1 +1,1888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Kumar - Portfolio | Manager & Technical Team Leader</title>
+  <meta name="description" content="Vishal Kumar - Manager at School ERP India, Technical Team Leader with expertise in software support, team management, and technical solutions.">
+  <meta name="keywords" content="Vishal Kumar, Manager, Software Support, Team Leader, PHP, MySQL, ERP, CRM, Bhopal">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --blue-400: #60a5fa;
+      --blue-500: #3b82f6;
+      --blue-600: #2563eb;
+      --purple-400: #a78bfa;
+      --purple-500: #8b5cf6;
+      --purple-600: #7c3aed;
+      --pink-400: #f472b6;
+      --pink-500: #ec4899;
+      --green-400: #4ade80;
+      --green-500: #22c55e;
+      --indigo-400: #818cf8;
+      --indigo-500: #6366f1;
+      --teal-400: #2dd4bf;
+      --teal-500: #14b8a6;
+      --orange-400: #fb923c;
+      --orange-500: #f97316;
+      --red-400: #f87171;
+      --red-500: #ef4444;
+      --slate-900: #0f172a;
+      --white: #ffffff;
+      --gray-300: #d1d5db;
+      --gray-400: #9ca3af;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(to bottom right, var(--slate-900), #1e1b4b, var(--slate-900));
+      color: var(--gray-300);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    
+    /* Animations */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    @keyframes gradient-x {
+      0%, 100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+    
+    @keyframes blob {
+      0% {
+        transform: translate(0px, 0px) scale(1);
+      }
+      33% {
+        transform: translate(30px, -50px) scale(1.1);
+      }
+      66% {
+        transform: translate(-20px, 20px) scale(0.9);
+      }
+      100% {
+        transform: translate(0px, 0px) scale(1);
+      }
+    }
+    
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 0.2;
+      }
+      50% {
+        opacity: 0.4;
+      }
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+    
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    /* Utility Classes */
+    .animate-fade-in-up {
+      animation: fadeInUp 0.8s ease-out forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out forwards;
+      opacity: 0;
+    }
+    
+    .animate-gradient-x {
+      animation: gradient-x 3s ease infinite;
+      background-size: 200% 200%;
+    }
+    
+    .animate-blob {
+      animation: blob 7s infinite;
+    }
+    
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .animate-pulse {
+      animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+    
+    .animate-bounce {
+      animation: bounce 1.5s infinite;
+    }
+    
+    .animate-spin {
+      animation: spin 6s linear infinite;
+    }
+    
+    .animation-delay-300 {
+      animation-delay: 300ms;
+    }
+    
+    .animation-delay-500 {
+      animation-delay: 500ms;
+    }
+    
+    .animation-delay-700 {
+      animation-delay: 700ms;
+    }
+    
+    .animation-delay-1000 {
+      animation-delay: 1000ms;
+    }
+    
+    .animation-delay-1200 {
+      animation-delay: 1200ms;
+    }
+    
+    .animation-delay-2000 {
+      animation-delay: 2s;
+    }
+    
+    .animation-delay-4000 {
+      animation-delay: 4s;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1e293b;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, var(--blue-500), var(--purple-500));
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, var(--blue-600), var(--purple-600));
+    }
+    
+    /* Selection color */
+    ::selection {
+      background: rgba(139, 92, 246, 0.3);
+      color: white;
+    }
+    
+    /* Layout Styles */
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Header/Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.5), transparent);
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .profile-avatar {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      background: linear-gradient(to bottom right, var(--blue-400), var(--purple-500), var(--pink-500));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin: 0 auto 2rem;
+    }
+    
+    .profile-avatar-inner {
+      position: absolute;
+      inset: 0.5rem;
+      background: var(--slate-900);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .profile-avatar-glow {
+      position: absolute;
+      inset: -1rem;
+      border-radius: 50%;
+      background: linear-gradient(to right, var(--blue-500), var(--purple-500));
+      filter: blur(1.5rem);
+      opacity: 0.3;
+      animation: pulse 3s infinite;
+    }
+    
+    .hero-title {
+      font-size: 4.5rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--blue-400), var(--purple-400), var(--pink-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.75rem;
+      color: var(--gray-300);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    
+    .hero-divider {
+      width: 6rem;
+      height: 0.25rem;
+      background: linear-gradient(to right, var(--blue-500), var(--purple-500));
+      margin: 1rem auto;
+      border-radius: 0.25rem;
+    }
+    
+    .hero-description {
+      font-size: 1.25rem;
+      color: var(--gray-400);
+      max-width: 60rem;
+      margin: 0 auto 2rem;
+      line-height: 1.6;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--gray-300);
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover {
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    
+    .contact-icon {
+      padding: 0.5rem;
+      background: rgba(59, 130, 246, 0.2);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-item:hover .contact-icon {
+      background: rgba(59, 130, 246, 0.3);
+    }
+    
+    .contact-item:nth-child(2) .contact-icon {
+      background: rgba(34, 197, 94, 0.2);
+    }
+    
+    .contact-item:nth-child(2):hover .contact-icon {
+      background: rgba(34, 197, 94, 0.3);
+    }
+    
+    .contact-item:nth-child(3) .contact-icon {
+      background: rgba(139, 92, 246, 0.2);
+    }
+    
+    .contact-item:nth-child(3):hover .contact-icon {
+      background: rgba(139, 92, 246, 0.3);
+    }
+    
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+    .btn-primary {
+      position: relative;
+      padding: 1rem 2rem;
+      background: linear-gradient(to right, var(--blue-500), var(--purple-600));
+      color: var(--white);
+      font-weight: 600;
+      border-radius: 9999px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 1;
+    }
+    
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, var(--purple-600), var(--pink-600));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+      z-index: -1;
+    }
+    
+    .btn-primary:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .btn-secondary {
+      padding: 1rem 2rem;
+      border: 2px solid var(--purple-500);
+      color: var(--purple-400);
+      font-weight: 600;
+      border-radius: 9999px;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .btn-secondary:hover {
+      background: var(--purple-500);
+      color: var(--white);
+      transform: scale(1.05);
+    }
+    
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .scroll-indicator-inner {
+      width: 1.5rem;
+      height: 2.5rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 9999px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .scroll-indicator-dot {
+      width: 0.25rem;
+      height: 0.75rem;
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 9999px;
+      margin-top: 0.5rem;
+      animation: bounce 1.5s infinite;
+    }
+    
+    /* Background Elements */
+    .background-elements {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    .blob {
+      position: absolute;
+      width: 20rem;
+      height: 20rem;
+      border-radius: 50%;
+      mix-blend-mode: multiply;
+      filter: blur(4rem);
+      opacity: 0.2;
+    }
+    
+    .blob-1 {
+      background: var(--purple-500);
+      top: -10rem;
+      right: -10rem;
+    }
+    
+    .blob-2 {
+      background: var(--blue-500);
+      bottom: -10rem;
+      left: -10rem;
+      animation-delay: 2s;
+    }
+    
+    .blob-3 {
+      background: var(--pink-500);
+      top: 10rem;
+      left: 10rem;
+      animation-delay: 4s;
+    }
+    
+    .particles {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      background: var(--white);
+      border-radius: 50%;
+      opacity: 0.1;
+    }
+    
+    /* Main Content Sections */
+    .main-content {
+      position: relative;
+      z-index: 10;
+      padding: 5rem 0;
+    }
+    
+    .section {
+      margin-bottom: 8rem;
+    }
+    
+    .section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--blue-400), var(--purple-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .section-divider {
+      width: 8rem;
+      height: 0.25rem;
+      background: linear-gradient(to right, var(--blue-500), var(--purple-500));
+      margin: 0 auto 3rem;
+      border-radius: 0.25rem;
+    }
+    
+    /* Achievement Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+    
+    .stat-card {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s ease;
+    }
+    
+    .stat-card:hover {
+      border-color: rgba(139, 92, 246, 0.5);
+      transform: scale(1.05) translateY(-0.5rem);
+    }
+    
+    .stat-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 4rem;
+      height: 4rem;
+      background: linear-gradient(to bottom right, var(--blue-500), var(--purple-600));
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .stat-number {
+      font-size: 2.25rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--blue-400), var(--purple-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+    
+    /* Professional Summary */
+    .summary-card {
+      position: relative;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      padding: 3rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .summary-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(to right, var(--blue-500), var(--purple-500), var(--pink-500));
+      border-radius: 1.5rem;
+      z-index: -1;
+      opacity: 0.25;
+      filter: blur(1px);
+    }
+    
+    .summary-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    
+    .summary-icon {
+      padding: 0.75rem;
+      background: linear-gradient(to bottom right, var(--blue-500), var(--purple-600));
+      border-radius: 1rem;
+    }
+    
+    .summary-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--blue-400), var(--purple-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .summary-text {
+      color: var(--gray-300);
+      line-height: 1.6;
+      font-size: 1.25rem;
+    }
+    
+    .highlight {
+      font-weight: 700;
+      background: linear-gradient(to right, var(--blue-400), var(--purple-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    /* Experience Section */
+    .experience-section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--green-400), var(--blue-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .experience-divider {
+      width: 8rem;
+      height: 0.25rem;
+      background: linear-gradient(to right, var(--green-500), var(--blue-500));
+      margin: 0 auto 4rem;
+      border-radius: 0.25rem;
+    }
+    
+    .experience-card {
+      position: relative;
+      margin-bottom: 4rem;
+    }
+    
+    .experience-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(to right, var(--green-500), var(--blue-500), var(--purple-500));
+      border-radius: 1.5rem;
+      z-index: -1;
+      opacity: 0.25;
+      filter: blur(1px);
+    }
+    
+    .experience-card.current::before {
+      background: linear-gradient(to right, var(--green-500), var(--blue-500));
+    }
+    
+    .experience-card-content {
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      padding: 3rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s ease;
+    }
+    
+    .experience-card:hover .experience-card-content {
+      transform: scale(1.02);
+    }
+    
+    .experience-header {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+    }
+    
+    .current-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(34, 197, 94, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+      width: fit-content;
+    }
+    
+    .current-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      background: var(--green-400);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    
+    .current-text {
+      color: var(--green-400);
+      font-weight: 600;
+    }
+    
+    .experience-title {
+      font-size: 1.875rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    
+    .experience-company {
+      font-size: 1.25rem;
+      color: var(--green-400);
+      font-weight: 600;
+    }
+    
+    .experience-location {
+      color: var(--gray-400);
+    }
+    
+    .experience-date {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--gray-400);
+      background: rgba(255, 255, 255, 0.05);
+      padding: 0.5rem 1rem;
+      border-radius: 9999px;
+      margin-top: 1rem;
+      width: fit-content;
+    }
+    
+    .experience-details {
+      display: grid;
+      gap: 1.5rem;
+    }
+    
+    .experience-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .experience-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(0.5rem);
+    }
+    
+    .experience-item-icon {
+      padding: 0.5rem;
+      background: linear-gradient(to bottom right, var(--green-500), var(--blue-500));
+      border-radius: 0.75rem;
+      flex-shrink: 0;
+    }
+    
+    .experience-item-text {
+      color: var(--gray-300);
+      line-height: 1.6;
+    }
+    
+    .highlight-item {
+      background: linear-gradient(to right, rgba(234, 179, 8, 0.2), rgba(249, 115, 22, 0.2));
+      border: 1px solid rgba(234, 179, 8, 0.3);
+    }
+    
+    .highlight-icon {
+      background: linear-gradient(to bottom right, var(--orange-400), var(--orange-500));
+    }
+    
+    /* Technical Skills */
+    .skills-section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--orange-400), var(--red-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .skills-divider {
+      width: 8rem;
+      height: 0.25rem;
+      background: linear-gradient(to right, var(--orange-500), var(--red-500));
+      margin: 0 auto 4rem;
+      border-radius: 0.25rem;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2rem;
+    }
+    
+    .skill-card {
+      position: relative;
+    }
+    
+    .skill-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(to right, var(--blue-500), var(--cyan-500));
+      border-radius: 1.5rem;
+      z-index: -1;
+      opacity: 0.25;
+      filter: blur(1px);
+      transition: opacity 1s ease;
+    }
+    
+    .skill-card:hover::before {
+      opacity: 0.4;
+    }
+    
+    .skill-card:nth-child(1)::before {
+      background: linear-gradient(to right, var(--blue-500), var(--cyan-500));
+    }
+    
+    .skill-card:nth-child(2)::before {
+      background: linear-gradient(to right, var(--purple-500), var(--pink-500));
+    }
+    
+    .skill-card:nth-child(3)::before {
+      background: linear-gradient(to right, var(--green-500), var(--emerald-500));
+    }
+    
+    .skill-card:nth-child(4)::before {
+      background: linear-gradient(to right, var(--orange-500), var(--red-500));
+    }
+    
+    .skill-card:nth-child(5)::before {
+      background: linear-gradient(to right, var(--teal-500), var(--blue-500));
+    }
+    
+    .skill-card:nth-child(6)::before {
+      background: linear-gradient(to right, var(--indigo-500), var(--purple-500));
+    }
+    
+    .skill-card-content {
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      height: 100%;
+      transition: all 0.5s ease;
+    }
+    
+    .skill-card:hover .skill-card-content {
+      transform: scale(1.05) translateY(-0.5rem);
+    }
+    
+    .skill-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .skill-icon {
+      padding: 0.75rem;
+      border-radius: 1rem;
+    }
+    
+    .skill-card:nth-child(1) .skill-icon {
+      background: linear-gradient(to bottom right, var(--blue-500), var(--cyan-500));
+    }
+    
+    .skill-card:nth-child(2) .skill-icon {
+      background: linear-gradient(to bottom right, var(--purple-500), var(--pink-500));
+    }
+    
+    .skill-card:nth-child(3) .skill-icon {
+      background: linear-gradient(to bottom right, var(--green-500), var(--emerald-500));
+    }
+    
+    .skill-card:nth-child(4) .skill-icon {
+      background: linear-gradient(to bottom right, var(--orange-500), var(--red-500));
+    }
+    
+    .skill-card:nth-child(5) .skill-icon {
+      background: linear-gradient(to bottom right, var(--teal-500), var(--blue-500));
+    }
+    
+    .skill-card:nth-child(6) .skill-icon {
+      background: linear-gradient(to bottom right, var(--indigo-500), var(--purple-500));
+    }
+    
+    .skill-title {
+      font-weight: 700;
+      color: var(--white);
+      font-size: 1.25rem;
+    }
+    
+    .skill-items {
+      display: grid;
+      gap: 0.75rem;
+    }
+    
+    .skill-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+    }
+    
+    .skill-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateX(0.5rem);
+    }
+    
+    .skill-item-icon {
+      color: var(--gray-400);
+    }
+    
+    .skill-item-text {
+      color: var(--gray-300);
+    }
+    
+    /* Core Competencies */
+    .competencies-section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--indigo-400), var(--purple-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .competencies-divider {
+      width: 8rem;
+      height: 0.25rem;
+      background: linear-gradient(to right, var(--indigo-500), var(--purple-500));
+      margin: 0 auto 4rem;
+      border-radius: 0.25rem;
+    }
+    
+    .competencies-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 1.5rem;
+    }
+    
+    .competency-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s ease;
+    }
+    
+    .competency-card:hover {
+      border-color: rgba(99, 102, 241, 0.5);
+      transform: scale(1.05) translateY(-0.25rem);
+    }
+    
+    .competency-icon {
+      padding: 0.75rem;
+      background: linear-gradient(to bottom right, var(--indigo-500), var(--purple-600));
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+    }
+    
+    .competency-card:hover .competency-icon {
+      animation: pulse 2s infinite;
+    }
+    
+    .competency-text {
+      color: var(--gray-300);
+      font-weight: 500;
+      font-size: 1.125rem;
+      transition: color 0.3s ease;
+    }
+    
+    .competency-card:hover .competency-text {
+      color: var(--white);
+    }
+    
+    /* Education Section */
+    .education-section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--teal-400), var(--blue-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    
+    .education-divider {
+      width: 8rem;
+      height: 0.25rem;
+      background: linear-gradient(to right, var(--teal-500), var(--blue-500));
+      margin: 0 auto 4rem;
+      border-radius: 0.25rem;
+    }
+    
+    .timeline {
+      position: relative;
+    }
+    
+    .timeline-line {
+      position: absolute;
+      left: 2rem;
+      top: 0;
+      bottom: 0;
+      width: 0.25rem;
+      background: linear-gradient(to bottom, var(--teal-500), var(--blue-500), var(--purple-500));
+      border-radius: 0.25rem;
+    }
+    
+    .timeline-items {
+      display: grid;
+      gap: 3rem;
+    }
+    
+    .timeline-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .timeline-dot {
+      position: relative;
+      z-index: 10;
+      width: 4rem;
+      height: 4rem;
+      background: linear-gradient(to bottom right, var(--teal-500), var(--blue-500));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+    
+    .timeline-item:nth-child(2) .timeline-dot {
+      background: linear-gradient(to bottom right, var(--blue-500), var(--indigo-500));
+    }
+    
+    .timeline-item:nth-child(3) .timeline-dot {
+      background: linear-gradient(to bottom right, var(--indigo-500), var(--purple-500));
+    }
+    
+    .timeline-item:hover .timeline-dot {
+      animation: pulse 2s infinite;
+    }
+    
+    .timeline-dot::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom right, var(--teal-500), var(--blue-500));
+      border-radius: 50%;
+      animation: ping 2s infinite;
+      opacity: 0.2;
+    }
+    
+    .timeline-item:nth-child(2) .timeline-dot::after {
+      background: linear-gradient(to bottom right, var(--blue-500), var(--indigo-500));
+    }
+    
+    .timeline-item:nth-child(3) .timeline-dot::after {
+      background: linear-gradient(to bottom right, var(--indigo-500), var(--purple-500));
+    }
+    
+    .timeline-content {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.5s ease;
+    }
+    
+    .timeline-item:hover .timeline-content {
+      border-color: rgba(45, 212, 191, 0.5);
+      transform: scale(1.05) translateY(-0.25rem);
+    }
+    
+    .education-degree {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    
+    .education-institution {
+      color: var(--teal-400);
+      font-weight: 600;
+      font-size: 1.125rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .education-year {
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+    
+    /* Contact Section */
+    .contact-section {
+      position: relative;
+    }
+    
+    .contact-card {
+      position: relative;
+      background: linear-gradient(to right, rgba(37, 99, 235, 0.9), rgba(124, 58, 237, 0.9));
+      backdrop-filter: blur(10px);
+      border-radius: 1.5rem;
+      padding: 3rem;
+      text-align: center;
+      color: var(--white);
+    }
+    
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      inset: -1px;
+      background: linear-gradient(to right, var(--blue-500), var(--purple-500), var(--pink-500));
+      border-radius: 1.5rem;
+      z-index: -1;
+      opacity: 0.3;
+      filter: blur(1px);
+      transition: opacity 1s ease;
+    }
+    
+    .contact-card:hover::before {
+      opacity: 0.5;
+    }
+    
+    .contact-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    
+    .contact-subtitle {
+      color: rgba(191, 219, 254, 1);
+      font-size: 1.25rem;
+      max-width: 52rem;
+      margin: 0 auto 3rem;
+      line-height: 1.6;
+    }
+    
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    
+    .contact-button {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-button:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05) translateY(-0.25rem);
+    }
+    
+    .contact-button-icon {
+      padding: 0.5rem;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 0.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-button:hover .contact-button-icon {
+      animation: pulse 2s infinite;
+    }
+    
+    .contact-button-text {
+      font-weight: 600;
+      font-size: 1.125rem;
+    }
+    
+    /* Footer */
+    .footer {
+      position: relative;
+      z-index: 10;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .footer-text {
+      color: var(--gray-400);
+      font-size: 1.125rem;
+    }
+    
+    /* Scroll to Top Button */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 50;
+      padding: 1rem;
+      background: linear-gradient(to right, var(--blue-500), var(--purple-600));
+      color: var(--white);
+      border-radius: 50%;
+      box-shadow: 0 10px 25px rgba(139, 92, 246, 0.25);
+      transition: all 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .scroll-top.visible {
+      opacity: 1;
+      pointer-events: auto;
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    .scroll-top:hover {
+      transform: scale(1.1);
+    }
+    
+    /* Responsive Styles */
+    @media (min-width: 640px) {
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      
+      .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      
+      .competencies-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 768px) {
+      .hero-title {
+        font-size: 6rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 2rem;
+      }
+      
+      .experience-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      
+      .experience-date {
+        margin-top: 0;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @keyframes ping {
+      0% {
+        transform: scale(1);
+        opacity: 0.2;
+      }
+      100% {
+        transform: scale(2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Elements -->
+  <div class="background-elements">
+    <div class="blob blob-1 animate-blob"></div>
+    <div class="blob blob-2 animate-blob"></div>
+    <div class="blob blob-3 animate-blob"></div>
+  </div>
+  
+  <!-- Floating Particles -->
+  <div class="particles">
+    <div class="particle animate-float" style="left: 10%; top: 20%; animation-delay: 0.5s;"></div>
+    <div class="particle animate-float" style="left: 25%; top: 70%; animation-delay: 1.5s;"></div>
+    <div class="particle animate-float" style="left: 50%; top: 40%; animation-delay: 2.5s;"></div>
+    <div class="particle animate-float" style="left: 75%; top: 80%; animation-delay: 3.5s;"></div>
+    <div class="particle animate-float" style="left: 90%; top: 30%; animation-delay: 4.5s;"></div>
+  </div>
+  
+  <!-- Header/Hero Section -->
+  <header class="hero">
+    <div class="hero-overlay" style="transform: translateY(0px);"></div>
+    
+    <div class="hero-content">
+      <div class="animate-fade-in-up">
+        <!-- Profile Avatar with Glow Effect -->
+        <div class="profile-avatar group">
+          <div class="profile-avatar-glow"></div>
+          <div class="profile-avatar-inner">
+            <i data-lucide="user" class="w-16 h-16 text-white"></i>
+          </div>
+        </div>
 
+        <h1 class="hero-title animate-gradient-x">Vishal Kumar</h1>
+        
+        <div class="relative">
+          <p class="hero-subtitle animate-fade-in-up animation-delay-300">
+            Manager - School ERP India
+          </p>
+          <div class="hero-divider animate-fade-in-up animation-delay-500"></div>
+        </div>
+
+        <p class="hero-description animate-fade-in-up animation-delay-700">
+          Technical Team Leader passionate about delivering high-quality software solutions 
+          and driving business growth through innovative technology.
+        </p>
+
+        <!-- Contact Info with Hover Effects -->
+        <div class="contact-info animate-fade-in-up animation-delay-1000">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i data-lucide="map-pin" class="w-5 h-5"></i>
+            </div>
+            <span>Bhopal, India</span>
+          </div>
+          <a href="tel:+917292908352" class="contact-item">
+            <div class="contact-icon">
+              <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <span>+91 7292908352</span>
+          </a>
+          <a href="mailto:vishalsingh681999@gmail.com" class="contact-item">
+            <div class="contact-icon">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
+            <span>vishalsingh681999@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="cta-buttons animate-fade-in-up animation-delay-1200">
+          <button class="btn-primary">
+            <i data-lucide="download" class="w-5 h-5"></i>
+            Download Resume
+          </button>
+          <button class="btn-secondary">
+            <i data-lucide="external-link" class="w-5 h-5"></i>
+            View Projects
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator animate-bounce">
+      <div class="scroll-indicator-inner">
+        <div class="scroll-indicator-dot"></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content container">
+    <!-- Achievement Stats -->
+    <section class="section animate-fade-in-up">
+      <div class="stats-grid">
+        <div class="stat-card" style="animation-delay: 0ms;">
+          <div class="stat-icon">
+            <i data-lucide="users" class="w-8 h-8 text-white"></i>
+          </div>
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Team Members Led</div>
+        </div>
+        <div class="stat-card" style="animation-delay: 200ms;">
+          <div class="stat-icon">
+            <i data-lucide="calendar" class="w-8 h-8 text-white"></i>
+          </div>
+          <div class="stat-number">2+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat-card" style="animation-delay: 400ms;">
+          <div class="stat-icon">
+            <i data-lucide="star" class="w-8 h-8 text-white"></i>
+          </div>
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-card" style="animation-delay: 600ms;">
+          <div class="stat-icon">
+            <i data-lucide="award" class="w-8 h-8 text-white"></i>
+          </div>
+          <div class="stat-number">1</div>
+          <div class="stat-label">Star Performer Award</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Summary -->
+    <section class="section animate-fade-in-up">
+      <div class="summary-card group">
+        <div class="summary-header">
+          <div class="summary-icon">
+            <i data-lucide="user" class="w-8 h-8 text-white"></i>
+          </div>
+          <h2 class="summary-title">Professional Summary</h2>
+        </div>
+        <p class="summary-text">
+          Dynamic and goal-driven professional with strong experience in software technical support, 
+          project coordination, and cross-functional team leadership. Recently promoted to Manager, 
+          leading a diverse team of over <span class="highlight">12 professionals</span>, 
+          including developers, testers, support staff, and sales executives. Passionate about delivering 
+          high-quality software solutions, ensuring customer satisfaction, and driving business growth.
+        </p>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section">
+      <h2 class="experience-section-title">Professional Experience</h2>
+      <div class="experience-divider"></div>
+      
+      <!-- Current Role -->
+      <div class="experience-card current">
+        <div class="experience-card-content">
+          <div class="experience-header">
+            <div>
+              <div class="current-badge">
+                <div class="current-dot"></div>
+                <span class="current-text">Current Position</span>
+              </div>
+              <h3 class="experience-title">Manager - School ERP India</h3>
+              <p class="experience-company">Vaibhav Infotech, Bhopal</p>
+            </div>
+            <div class="experience-date">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              <span>March 2023 – Present</span>
+            </div>
+          </div>
+          
+          <div class="experience-details">
+            <div class="experience-item">
+              <div class="experience-item-icon">
+                <i data-lucide="users" class="w-5 h-5 text-white"></i>
+              </div>
+              <p class="experience-item-text">Leading a cross-functional team of 12+ members: developers, testers, support, and sales teams.</p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-item-icon">
+                <i data-lucide="monitor" class="w-5 h-5 text-white"></i>
+              </div>
+              <p class="experience-item-text">Managing software support operations, resolving complex technical issues, and overseeing client onboarding.</p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-item-icon">
+                <i data-lucide="database" class="w-5 h-5 text-white"></i>
+              </div>
+              <p class="experience-item-text">Conducting remote training sessions, software installation/configuration, and database management using PHP and MySQL.</p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-item-icon">
+                <i data-lucide="file-spreadsheet" class="w-5 h-5 text-white"></i>
+              </div>
+              <p class="experience-item-text">Monitoring team performance, allocating tasks, and ensuring sales and support targets are achieved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Previous Role -->
+      <div class="experience-card">
+        <div class="experience-card-content">
+          <div class="experience-header">
+            <div>
+              <h3 class="experience-title">Senior Customer Support Associate</h3>
+              <p class="experience-company">Government e-Marketplace, GEM</p>
+              <p class="experience-location">Magnum Super Distributors Pvt. Ltd., Bhopal</p>
+            </div>
+            <div class="experience-date">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              <span>Nov 2021 – Dec 2022</span>
+            </div>
+          </div>
+          
+          <div class="experience-details">
+            <div class="experience-item">
+              <div class="experience-item-icon">
+                <i data-lucide="monitor" class="w-5 h-5 text-white"></i>
+              </div>
+              <p class="experience-item-text">Handled technical escalations, recurring issues, and time-bound CRM complaints.</p>
+            </div>
+            <div class="experience-item highlight-item">
+              <div class="experience-item-icon highlight-icon">
+                <i data-lucide="star" class="w-5 h-5 text-white"></i>
+              </div>
+              <p class="experience-item-text">
+                Received <span class="highlight">Star Performer Award</span> in October 2022 and frequent client appreciation.
+              </p>
+            </div>
+            <div class="experience-item">
+              <div class="experience-item-icon">
+                <i data-lucide="file-spreadsheet" class="w-5 h-5 text-white"></i>
+              </div>
+              <p class="experience-item-text">Used Excel tools for live tracking and incident analysis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="section animate-fade-in-up">
+      <h2 class="skills-section-title">Technical Skills</h2>
+      <div class="skills-divider"></div>
+      
+      <div class="skills-grid">
+        <div class="skill-card" style="animation-delay: 0ms;">
+          <div class="skill-card-content">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="code" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="skill-title">Languages</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">PHP</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">HTML</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">CSS</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Bootstrap</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card" style="animation-delay: 200ms;">
+          <div class="skill-card-content">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="monitor" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="skill-title">Tools & IDEs</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Android Studio</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Dreamweaver</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Sublime Text</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Visual Studio Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card" style="animation-delay: 400ms;">
+          <div class="skill-card-content">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="database" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="skill-title">Operating Systems</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Windows 10/11</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">macOS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card" style="animation-delay: 600ms;">
+          <div class="skill-card-content">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="briefcase" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="skill-title">Software Platforms</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">ERP (Educational & Industrial)</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">CRM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card" style="animation-delay: 800ms;">
+          <div class="skill-card-content">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="file-spreadsheet" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="skill-title">Excel Tools</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">VLOOKUP</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">HLOOKUP</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Pivot Table</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">COUNTIF</span>
+              </div>
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">Slicer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card" style="animation-delay: 1000ms;">
+          <div class="skill-card-content">
+            <div class="skill-header">
+              <div class="skill-icon">
+                <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+              </div>
+              <h3 class="skill-title">Mobile Development</h3>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <i data-lucide="chevron-right" class="skill-item-icon w-4 h-4"></i>
+                <span class="skill-item-text">iOS App Application Registration and Build</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section class="section animate-fade-in-up">
+      <h2 class="competencies-section-title">Core Competencies</h2>
+      <div class="competencies-divider"></div>
+      
+      <div class="competencies-grid">
+        <div class="competency-card" style="animation-delay: 0ms;">
+          <div class="competency-icon">
+            <i data-lucide="users" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="competency-text">Cross-functional Team Leadership</span>
+        </div>
+        <div class="competency-card" style="animation-delay: 100ms;">
+          <div class="competency-icon">
+            <i data-lucide="monitor" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="competency-text">Software Implementation & Technical Support</span>
+        </div>
+        <div class="competency-card" style="animation-delay: 200ms;">
+          <div class="competency-icon">
+            <i data-lucide="target" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="competency-text">Product Demo & Client Training</span>
+        </div>
+        <div class="competency-card" style="animation-delay: 300ms;">
+          <div class="competency-icon">
+            <i data-lucide="database" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="competency-text">CRM Ticket Resolution</span>
+        </div>
+        <div class="competency-card" style="animation-delay: 400ms;">
+          <div class="competency-icon">
+            <i data-lucide="trending-up" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="competency-text">Data Analysis & Reporting</span>
+        </div>
+        <div class="competency-card" style="animation-delay: 500ms;">
+          <div class="competency-icon">
+            <i data-lucide="external-link" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="competency-text">Client Engagement & Sales Coordination</span>
+        </div>
+        <div class="competency-card" style="animation-delay: 600ms;">
+          <div class="competency-icon">
+            <i data-lucide="award" class="w-6 h-6 text-white"></i>
+          </div>
+          <span class="competency-text">Performance Monitoring & Strategic Planning</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section animate-fade-in-up">
+      <h2 class="education-section-title">Education</h2>
+      <div class="education-divider"></div>
+      
+      <div class="timeline">
+        <div class="timeline-line"></div>
+        
+        <div class="timeline-items">
+          <div class="timeline-item" style="animation-delay: 0ms;">
+            <div class="timeline-dot">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="education-degree">Bachelor of Computer Applications (BCA)</h3>
+              <p class="education-institution">RKDF University, Bhopal</p>
+              <p class="education-year">2021</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item" style="animation-delay: 200ms;">
+            <div class="timeline-dot">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="education-degree">12th Grade</h3>
+              <p class="education-institution">BSEB</p>
+              <p class="education-year">2018</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item" style="animation-delay: 400ms;">
+            <div class="timeline-dot">
+              <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+            </div>
+            <div class="timeline-content">
+              <h3 class="education-degree">10th Grade</h3>
+              <p class="education-institution">BSEB</p>
+              <p class="education-year">2015</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section animate-fade-in-up">
+      <div class="contact-card group">
+        <h2 class="contact-title">Let's Connect</h2>
+        <p class="contact-subtitle">
+          Ready to discuss new opportunities or collaborate on exciting projects? 
+          Let's build something amazing together.
+        </p>
+        
+        <div class="contact-actions">
+          <a href="tel:+917292908352" class="contact-button">
+            <div class="contact-button-icon">
+              <i data-lucide="phone" class="w-6 h-6"></i>
+            </div>
+            <span class="contact-button-text">+91 7292908352</span>
+          </a>
+          <a href="mailto:vishalsingh681999@gmail.com" class="contact-button">
+            <div class="contact-button-icon">
+              <i data-lucide="mail" class="w-6 h-6"></i>
+            </div>
+            <span class="contact-button-text">vishalsingh681999@gmail.com</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-text">
+        © 2025 Vishal Kumar. All rights reserved. | Crafted with passion in Bhopal, India
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top">
+    <i data-lucide="arrow-up" class="w-6 h-6"></i>
+  </button>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+    
+    // Scroll to top button functionality
+    const scrollTopBtn = document.querySelector('.scroll-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('visible');
+      } else {
+        scrollTopBtn.classList.remove('visible');
+      }
+    });
+    
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Animation on scroll
+    const animateOnScroll = () => {
+      const elements = document.querySelectorAll('.animate-fade-in-up');
+      
+      elements.forEach(element => {
+        const elementPosition = element.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        
+        if (elementPosition < windowHeight - 100) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateOnScroll);
+    
+    // Parallax effect for hero overlay
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY;
+      const heroOverlay = document.querySelector('.hero-overlay');
+      heroOverlay.style.transform = `translateY(${scrollY * 0.5}px)`;
+    });
+  </script>
+</body>
+</html>
